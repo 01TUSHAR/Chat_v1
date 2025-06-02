@@ -2,11 +2,12 @@
   "name": "chat-app-socket.io",
   "private": true,
   "scripts": {
-    "copy-env": "copy .env client\\.env",
+     "copy-env": "cpy .env client",
     "dev": "npm run copy-env && concurrently -n \"client,server\" -c \"bgBlue.bold,bgYellow.bold\" \"npm run dev:client --prefix client\" \"npm run dev:server --prefix server\"",
     "build": "npm install && npm install --prefix client && npm install --prefix server"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "cpy-cli": "^5.0.0"
   }
 }
